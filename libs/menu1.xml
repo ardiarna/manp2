@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<menu>
+  <item text="Master Data" id="master">
+    <item text="Area Palet" id="mstdat01">
+      <userdata name="href">FrmMstArea.html</userdata>
+    </item>
+    <item text="Lokasi Palet" id="mstdat02">
+      <userdata name="href">FrmMstLok.html</userdata>
+    </item>
+  </item>
+  <item type="separator"/>
+  <item text="Alokasi Palet" id="location">
+    <item text="Penentuan Lokasi per Palet" id="add_single_pallet_to_location">
+      <userdata name="href">location/AddSinglePalletToLocation.php</userdata>
+    </item>
+    <item text="Pemindahan Palet per Lokasi" id="move_pallets_by_location">
+      <userdata name="href">location/MovePalletsByLocationId.php</userdata>
+    </item>
+    <item text="Penghapusan Lokasi Palet" id="remove_pallets_from_location">
+      <userdata name="href">location/RemovePalletsFromLocation.php</userdata>
+    </item>
+    <item type="separator"/>
+    <item text="Daftar Palet Per Area/Baris" id="pallets_per_line">
+      <userdata name="href">location/PalletsPerLine.php</userdata>
+    </item>
+    <item text="Daftar Palet Tanpa Lokasi" id="pallets_no_location">
+      <userdata name="href">reports/stock/PalletsWithoutLocation.php</userdata>
+    </item>
+  </item>
+  <item type="separator"/>
+  <item text="QA" id="qa">
+    <item text="Blokir Palet" id="qa_block" disabled="true">
+      <userdata name="href">qa/BlockPallets.php</userdata>
+    </item>
+    <item type="separator"/>
+    <item text="Downgrade Palet" id="qa_downgrade">
+      <userdata name="href">qa/DowngradePallets.php</userdata>
+    </item>
+    <item type="separator"/>
+    <item text="Daftar Palet Terblokir" id="qa_blocked_pallets" disabled="true">
+      <userdata name="href">qa/BlockedPallets.php</userdata>
+    </item>
+  </item>
+  <item type="separator"/>
+  <item text="Stok Opname" id="invcheck">
+    <item text="Input Opname" id="stockopn01" disabled="true">
+      <userdata name="href">FrmOpnInpt.html</userdata>
+    </item>
+    <item type="separator"/>
+    <item text="Hasil Opname" id="stockopn02">
+      <userdata name="href">FrmOpnHasil.html</userdata>
+    </item>
+  </item>
+  <item type="separator"/>
+  <item text="Laporan Stok" id="stock-report">
+    <item text="Ringkasan Stok per Lokasi" id="stock-summary-by-location">
+      <userdata name="href">FrmStockBarangByLokasi.html</userdata>
+    </item>
+    <item text="Ringkasan Stok per Motif" id="stock-summary-by-motif">
+      <userdata name="href">FrmStockBarang.html</userdata>
+    </item>
+    <item type="separator"/>
+    <item text="Mutasi Stok" id="stock-mutation">
+      <userdata name="href">reports/stock/MutationSummaryByMotif.php</userdata>
+    </item>
+    <item text="Kartu Stok" id="stock-card">
+      <userdata name="href">FrmStockCard.html</userdata>
+    </item>
+    <item text="Laporan Detail Mutasi" id="stock-sales_report">
+      <userdata name="href">FrmStockSalesReport.html</userdata>
+    </item>
+<!--
+    <item text="Kartu Stok2" id="stock-card2">
+      <userdata name="href">FrmStockCard2.html</userdata>
+    </item>
+-->
+    <item type="separator"/>
+    <item text="Daftar Barang ECO Downgrade" id="stock-downgraded">
+      <userdata name="href">Frmlokpaldownrep.html</userdata>
+    </item>
+  </item>
+</menu>

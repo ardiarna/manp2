@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0">
+					<item text="&lt;font size='2' color='blue' &gt;System Setting&lt;/font&gt;" id="lb_1001">
+						<item text="&lt;font size='2'  &gt;Company&lt;/font&gt;" id="lb_100101"><userdata name="href">frmcompany.html</userdata></item>
+						<item text="Plant" id="lb_100102"><userdata name="href">frmworklocation.html</userdata></item>
+						<item text="Location" id="lb_100105"><userdata name="href">frmjobgradecat.html</userdata></item>
+						<item text="Sub Location" id="lb_100104"><userdata name="href">frmjobgrade.html</userdata></item>
+						<item text="Manufacture" id="lb_100104"><userdata name="href">frmjobgrade.html</userdata></item>
+						<item text="Cost Centre" id="lb_100106"></item>
+						<item text="Job Status" id="lb_100107"><userdata name="href">frmjobstatus.html</userdata></item>
+						<item text="Job Family Grade" id="lb_100108"></item>
+						<item text="Job Family" id="lb_100109"></item>
+						<item text="Job Family Level" id="lb_100110"></item>
+					</item>
+					<item text="&lt;font size='2' color='blue' &gt;Equipment&lt;/font&gt;" id="tesss"><userdata name="href">frmnation.html</userdata></item>
+					<item text="&lt;font size='2' color='blue' &gt;Employee Setting&lt;/font&gt;" id="lb_1002">
+						<item text="Nationality" id="lb_100201"><userdata name="href">frmnation.html</userdata></item>
+						<item text="Religion" id="lb_100202"><userdata name="href">frmreligion.html</userdata></item>
+						<item text="Family Relationship" id="lb_100203"><userdata name="href">frmrelation.html</userdata></item>
+						<item text="Educational Level" id="lb_100204"><userdata name="href">frmedulevel.html</userdata></item>
+						<item text="Educational Institution" id="lb_100205"><userdata name="href">frmeduinst.html</userdata></item>
+						<item text="Company Facility" id="lb_100206"><userdata name="href">frmcompfacility.html</userdata></item>
+						<item text="Doctor or Hospital Reference" id="lb_100207"><userdata name="href">frmdochost.html</userdata></item>
+						<item text="Disease Type" id="lb_100208"><userdata name="href">frmdisease.html</userdata></item>
+						<item text="Document Management" id="lb_100209"><userdata name="href">frmdocument.html</userdata></item>
+					</item>
+					<item text="&lt;font size='2' color='blue' &gt;Carrer Setting&lt;/font&gt;" id="lb_1003">
+						<item text="Award Type" id="lb_100301"><userdata name="href">frmaward.html</userdata></item>
+						<item text="Discipline Type" id="lb_100302"><userdata name="href">frmdiscipline.html</userdata></item>
+						<item text="Employment Status" id="lb_100303"><userdata name="href">frmemplstatus.html</userdata></item>
+						<item text="Career Transition" id="lb_100304"><userdata name="href">frmcareertrans.html</userdata></item>
+						<item text="Career Transition Detail" id="lb_100305"><userdata name="href">frmlead.html</userdata></item>
+						<item text="Termination Reason" id="lb_100306"><userdata name="href">frmresignreason.html</userdata></item>
+					</item>
+					<item text="Time and Attendance Setting" id="lb_1004">
+						<item text="Time and Attendance Setting" id="lb_100401"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Reimbursement Setting" id="lb_1005">
+						<item text="Reimbursement Type" id="lb_100501"><userdata name="href">frmlead.html</userdata></item>
+						<item text="Type of Expense" id="lb_100502"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Payroll Setting" id="lb_1007">
+						<item text="Payroll Setting" id="lb_100701"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Performance Setting" id="lb_1008">
+						<item text="Performance Setting" id="lb_100801"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Training Setting" id="lb_1009">
+						<item text="Training Setting" id="lb_100901"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Recruitment Setting" id="lb_1010">
+						<item text="Source Category" id="lb_101001"></item>
+						<item text="Source Media" id="lb_101002"></item>
+						<item text="Selection Type" id="lb_101003"></item>
+						<item text="Selection Type Series" id="lb_101004"></item>
+						<item text="Screening Type" id="lb_101005"></item>
+						<item text="Man Power Plan Period" id="lb_101006"></item>
+					</item>
+					<item text="System Setting" id="lb_1011">
+						<item text="Curency" id="lb_101101"><userdata name="href">frmsetcurrency.html</userdata></item>
+						<item text="Bank" id="lb_101102"><userdata name="href">frmbank.html</userdata></item>
+						<item text="Insurance" id="lb_101103"><userdata name="href">frminsurance.html</userdata></item>
+						<item text="Score Setting" id="lb_101104"><userdata name="href">frmcountry.html</userdata></item>
+						<item text="City" id="lb_101105"><userdata name="href">frmcity.html</userdata></item>
+						<item text="State/Province" id="lb_101106"><userdata name="href">frmstate.html</userdata></item>
+						<item text="Country" id="lb_101107"><userdata name="href">frmcountry.html</userdata></item>
+						<item text="Line of Business" id="lb_101108"><userdata name="href">frmlinebusiness.html</userdata></item>
+						<item text="Industry" id="lb_101109"><userdata name="href">frmindustry.html</userdata></item>
+						<item text="Language" id="lb_101110"><userdata name="href">frmlanguage.html</userdata></item>
+						<item text="Holiday" id="lb_101111"><userdata name="href">frmholiday.html</userdata></item>
+					</item>
+</tree>
+
+
+				

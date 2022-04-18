@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0">
+	<item text="Human Resources Management System" id="irmenu" open="1" call="1" select="1">
+				<item text="Data Master and Parameter Setup" id="lb_10">
+					<item text="Organization Setting" id="lb_1001">
+						<item text="Company" id="lb_100101"><userdata name="href">frmcompany.html</userdata></item>
+						<item text="Organization Structure" id="lb_100101"></item>
+						<item text="Work Location" id="lb_100102"><userdata name="href">frmworklocation.html</userdata></item>
+						<item text="Job Title" id="lb_100103"></item>
+						<item text="Job Grade Category" id="lb_100105"><userdata name="href">frmjobgradecat.html</userdata></item>
+						<item text="Job Grade" id="lb_100104"><userdata name="href">frmjobgrade.html</userdata></item>
+						<item text="Cost Centre" id="lb_100106"></item>
+						<item text="Job Status" id="lb_100107"><userdata name="href">frmjobstatus.html</userdata></item>
+						<item text="Job Family Grade" id="lb_100108"></item>
+						<item text="Job Family" id="lb_100109"></item>
+						<item text="Job Family Level" id="lb_100110"></item>
+						<item text="Department" id="lb_100111"><userdata name="href">frmdepartment.html</userdata></item>
+					</item>
+					<item text="Employee Setting" id="lb_1002">
+						<item text="Nationality" id="lb_100201"><userdata name="href">frmnation.html</userdata></item>
+						<item text="Religion" id="lb_100202"><userdata name="href">frmreligion.html</userdata></item>
+						<item text="Family Relationship" id="lb_100203"><userdata name="href">frmrelation.html</userdata></item>
+						<item text="Educational Level" id="lb_100204"><userdata name="href">frmedulevel.html</userdata></item>
+						<item text="Educational Institution" id="lb_100205"><userdata name="href">frmeduinst.html</userdata></item>
+						<item text="Company Facility" id="lb_100206"><userdata name="href">frmcompfacility.html</userdata></item>
+						<item text="Doctor or Hospital Reference" id="lb_100207"><userdata name="href">frmdochost.html</userdata></item>
+						<item text="Disease Type" id="lb_100208"><userdata name="href">frmdisease.html</userdata></item>
+						<item text="Document Management" id="lb_100209"><userdata name="href">frmdocument.html</userdata></item>
+					</item>
+					<item text="Carrer Setting" id="lb_1003">
+						<item text="Award Type" id="lb_100301"><userdata name="href">frmaward.html</userdata></item>
+						<item text="Discipline Type" id="lb_100302"><userdata name="href">frmdiscipline.html</userdata></item>
+						<item text="Employment Status" id="lb_100303"><userdata name="href">frmemplstatus.html</userdata></item>
+						<item text="Career Transition" id="lb_100304"><userdata name="href">frmcareertrans.html</userdata></item>
+						<item text="Career Transition Detail" id="lb_100305"><userdata name="href">frmlead.html</userdata></item>
+						<item text="Termination Reason" id="lb_100306"><userdata name="href">frmresignreason.html</userdata></item>
+					</item>
+					<item text="Time and Attendance Setting" id="lb_1004"><userdata name="href">frmlead.html</userdata></item>
+					<item text="Reimbursement Setting" id="lb_1005">
+						<item text="Reimbursement Type" id="lb_100501"><userdata name="href">frmlead.html</userdata></item>
+						<item text="Type of Expense" id="lb_100502"><userdata name="href">frmlead.html</userdata></item>
+					</item>
+					<item text="Loan Setting" id="lb_1006"><userdata name="href">frmlead.html</userdata></item>
+					<item text="Payroll Setting" id="lb_1007"><userdata name="href">frmlead.html</userdata></item>
+					<item text="Performance Setting" id="lb_1008"><userdata name="href">frmlead.html</userdata></item>
+					<item text="Training Setting" id="lb_1009"><userdata name="href">frmlead.html</userdata></item>
+					<item text="Recruitment Setting" id="lb_1010">
+						<item text="Source Category" id="lb_101001"></item>
+						<item text="Source Media" id="lb_101002"></item>
+						<item text="Selection Type" id="lb_101003"></item>
+						<item text="Selection Type Series" id="lb_101004"></item>
+						<item text="Screening Type" id="lb_101005"></item>
+						<item text="Man Power Plan Period" id="lb_101006"></item>
+					</item>
+					<item text="System Setting" id="lb_1011">
+						<item text="Curency" id="lb_101101"><userdata name="href">frmsetcurrency.html</userdata></item>
+						<item text="Bank" id="lb_101102"><userdata name="href">frmbank.html</userdata></item>
+						<item text="Insurance" id="lb_101103"><userdata name="href">frminsurance.html</userdata></item>
+						<item text="Score Setting" id="lb_101104"><userdata name="href">frmcountry.html</userdata></item>
+						<item text="City" id="lb_101105"><userdata name="href">frmcity.html</userdata></item>
+						<item text="State/Province" id="lb_101106"><userdata name="href">frmstate.html</userdata></item>
+						<item text="Country" id="lb_101107"><userdata name="href">frmcountry.html</userdata></item>
+						<item text="Line of Business" id="lb_101108"><userdata name="href">frmlinebusiness.html</userdata></item>
+						<item text="Industry" id="lb_101109"><userdata name="href">frmindustry.html</userdata></item>
+						<item text="Language" id="lb_101110"><userdata name="href">frmlanguage.html</userdata></item>
+						<item text="Holiday" id="lb_101111"><userdata name="href">frmholiday.html</userdata></item>
+					</item>
+				</item>
+				<item text="Organization" id="lb_11">
+					<item text="Organization Structure" id="lb_1101"></item>
+					<item text="Organization Chart" id="lb_1102"></item>
+					<item text="Company Policy" id="lb_1103"></item>
+					<item text="Organization Report" id="lb_1104"></item>
+					<item text="Announcement Request" id="lb_1105">
+						<item text="Announcement Request" id="lb_110501"></item>
+						<item text="Announcement Request Approval" id="lb_110502"></item>
+					</item>
+					<item text="Organization Report" id="lb_1106">
+						<item text="Job Grade Report" id="lb_110601"></item>
+						<item text="Organization Structure Change History" id="lb_110602"></item>
+						<item text="Employee per Department Report" id="lb_110603"></item>
+						<item text="Vacant Position Report" id="lb_110604"></item>
+					</item>
+				</item>
+				<item text="Employee" id="lb_12">
+					<item text="Employee Master" id="lb_1201"><userdata name="href">frmemployeemaster.html</userdata></item>
+					<item text="Employee Information" id="lb_1202"><userdata name="href">frmaccount.html</userdata></item>
+					<item text="OHSA" id="lb_1203">
+						<item text="OHSA Category" id="lb_120301"><userdata name="href">frmaccount.html</userdata></item>
+						<item text="OHSA Insiden" id="lb_120302"><userdata name="href">frmaccount.html</userdata></item>
+					</item>
+					<item text="Resource Booking" id="lb_1204"><userdata name="href">frmaccount.html</userdata></item>
+					<item text="Employee Report" id="lb_1205">
+						<item text="Contract Employee Report" id="lb_120501"><userdata name="href">frmaccount.html</userdata></item>
+						<item text="Custom Report" id="lb_120501"><userdata name="href">frmaccount.html</userdata></item>
+					</item>
+					<item text="Employee Dashboard" id="lb_1206"><userdata name="href">frmaccount.html</userdata></item>
+				</item>
+				<item text="Recruitment" id="lb_13">
+					<item text="Recruitment" id="lb_1301"><userdata name="href">frmopportunity.html</userdata></item>
+				</item>
+				<item text="Career Administration" id="lb_14">
+					<item text="Career Administration" id="lb_1401"><userdata name="href">frmcontact.html</userdata></item>
+				</item>
+				<item text="Training" id="lb_15">
+					<item text="Training" id="lb_1501"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+				<item text="Performance Management" id="lb_16">
+					<item text="Performance Management" id="lb_16"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+				<item text="Time Attendance" id="lb_17">
+					<item text="Time Attendance" id="lb_1701"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+				<item text="Payroll" id="lb_18">
+					<item text="Payroll" id="lb_1801"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+				<item text="Reimbursement" id="lb_19">
+					<item text="Reimbursement" id="lb_1901"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+				<item text="Loan" id="lb_20">
+					<item text="Loan" id="lb_2001"><userdata name="href">frmliburnasional.php</userdata></item>
+				</item>
+	</item>
+</tree>
+
+
+				

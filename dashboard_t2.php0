@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="assets/fonts/font_awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/libs/ionicons/ionicons.min.css">
+  <link rel="stylesheet" href="assets/libs/adminlte/css/AdminLTE.css">
+  <!-- <link rel="stylesheet" href="dist/css/hurufGoogle.css"> -->
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+  <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
+  <script src="assets/libs/adminlte/js/adminlte.js"></script>
+  <script src="assets/libs/highcharts/highcharts.min.js"></script>
+  <script src="assets/libs/moment/moment-with-locales.min.js"></script>
+</head>
+<body class="hold-transition skin-blue-light sidebar-mini fixed">
+  <section class="content" style="background-color:#ecf0f5;">
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="judulModal"></h4>
+          </div>
+          <div class="modal-body table-responsive" id="isiModal">...Loading...</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Downtime &amp; Cost Filter</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="col-sm-2">
+              <select class="form-control input-sm" id="cmbJenis">
+                  <option value="M">Monthly</option>
+                  <option value="Y" selected="true">Yearly</option>
+              </select>
+            </div>
+            <div class="col-sm-3" id="dvMonth" style="display: none;">
+                <div class="input-group">
+                    <div class="input-group-addon"> Month : </div>
+                    <select class="form-control input-sm" id="cmbMonth">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <div class="input-group-addon"> Year : </div>
+                    <input class="form-control input-sm" type="text" id="cmbYear">
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-primary btn-sm" onclick="loadChart();"><span>GET</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener5" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script type="text/javascript">
+    const FRM = 'dashboard.inc.php';
+
+    setInterval(function(){
+      loadChart();    
+    },5*60*1000);
+
+    $(document).ready(function () {
+      $("#cmbYear").datepicker({
+        autoclose:true,
+        format:'yyyy',
+        startView: 'decade',
+        minViewMode: 'decade',
+        viewSelect: 'decade'
+      }).val(moment().format("YYYY"));
+      $("#cmbMonth").val(moment().format("M"));
+
+      $("#cmbJenis").change(function(){
+        if($(this).val() == 'M') {
+          $("#dvMonth").show();
+        } else {
+          $("#dvMonth").hide();
+        }
+      });
+
+      loadChart();
+    })
+      
+    function tampilChart(grfnya, typenya, axisx, judulnya, juduly, datanya) {
+      Highcharts.chart(grfnya, {
+        chart: {
+          type: typenya
+        },
+        title: {
+          text: judulnya
+        },
+        xAxis: {
+          categories: axisx,
+          crosshair: true
+        },
+        yAxis: {
+          title: {
+            text: juduly
+          }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px;color:{series.color}">{series.name}</span><br>',
+            pointFormat: ': <b>{point.y:f} Min</b><br/>'
+        },
+        credits : {
+          enabled : false
+        },
+        plotOptions: {
+          column: {
+            dataLabels: {
+              enabled: true
+            }  
+          },
+          line: {
+            dataLabels: {
+              enabled: true
+            },
+            enableMouseTracking: false
+          },
+          series: {
+            cursor: 'pointer',
+            point: {
+                events: {
+                    click: function() {
+                        viewDetailChart(grfnya, this.series.name);
+                    }
+                }
+            }
+          }
+        },
+        series: datanya
+      });
+    }
+
+    function loadChart() {
+      var cmbJenis = $("#cmbJenis").val();
+      var cmbMonth = $("#cmbMonth").val();
+      var cmbYear = $("#cmbYear").val();
+      
+      $.ajax({
+        url: FRM+ "?mode=loadchart&jns="+cmbJenis+"&thn="+cmbYear+"&bln="+cmbMonth, 
+        success: function(result){
+          var o = JSON.parse(result);
+          tampilChart('kontener1', 'column', [''], '5 Downtime Terbesar By Assets', 'Downtime (minutes)', o.data_a);
+          tampilChart('kontener2', 'column', [''], '5 Downtime Terbesar By Maintenance Type', 'Downtime (minutes)', o.data_b);
+          tampilChart('kontener3', 'column', [''], '5 Downtime Maintenance Terbesar', 'Downtime (minutes)', o.data_c);
+          tampilChart('kontener4', 'column', [''], '5 Downtime Produksi Terbesar', 'Downtime (minutes)', o.data_d);
+          tampilChart('kontener5', 'column', [''], '5 Asset Berbiaya Terbesar', 'Cost (rupiah)', o.data_e);            
+        }
+      });
+    }
+
+    function viewDetailChart(kontener, nilai) {
+      var cmbJenis = $("#cmbJenis").val();
+      var cmbMonth = $("#cmbMonth").val();
+      var cmbYear = $("#cmbYear").val();
+      
+      $.ajax({
+        url: FRM+ "?mode=dtlchart&jns="+cmbJenis+"&thn="+cmbYear+"&bln="+cmbMonth+"&ktn="+kontener+"&val="+nilai, 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Detail');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');            
+        }
+      });
+    }
+    
+  </script>
+</body>
+</html>

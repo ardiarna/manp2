@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="assets/fonts/font_awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/libs/ionicons/ionicons.min.css">
+  <link rel="stylesheet" href="assets/libs/adminlte/css/AdminLTE.css">
+  <!-- <link rel="stylesheet" href="dist/css/hurufGoogle.css"> -->
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+  <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
+  <script src="assets/libs/adminlte/js/adminlte.js"></script>
+  <script src="assets/libs/highcharts/highcharts.min.js"></script>
+  <script src="assets/libs/moment/moment-with-locales.min.js"></script>
+</head>
+<body class="hold-transition skin-blue-light sidebar-mini fixed">
+  <section class="content" style="background-color:#ecf0f5;">
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="judulModal"></h4>
+          </div>
+          <div class="modal-body table-responsive" id="isiModal">...Loading...</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Request</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="table-responsive">
+              <table class="table no-margin table-striped">
+                <tbody>
+                <tr>
+                  <th>Request Bulan Ini</th>
+                  <td><span class="label label-primary" id="spReqBlnIni" onclick="detailReqBlnIni();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Request Belum di-Approve</th>
+                  <td><span class="label label-info" id="spReqNotAppr" onclick="detailReqNotAppr();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Request Belum di-Schedule-kan</th>
+                  <td><span class="label label-warning" id="spReqNotSch" onclick="detailReqNotSch();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Request Cancel</th>
+                  <td><span class="label label-danger" id="spReqCancel" onclick="detailReqCancel();">0</span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Work Order</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="table-responsive">
+              <table class="table no-margin table-striped">
+                <tbody>
+                <tr>
+                  <th>Work Order Bulan Ini</th>
+                  <td><span class="label label-primary" id="spWoBlnIni" onclick="detailWoBlnIni();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Work Order Completed Bulan Ini</th>
+                  <td><span class="label label-success" id="spWoComp" onclick="detailWoComp();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Work Order Belum Siap Dikerjakan</th>
+                  <td><span class="label label-info" id="spWoNotReady" onclick="detailWoNotReady();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Work Order Belum Completed</th>
+                  <td><span class="label label-warning" id="spWoNotComp" onclick="detailWoNotComp();">0</span></td>
+                </tr>
+                <tr>
+                  <th>Work Order Cancel</th>
+                  <td><span class="label label-danger" id="spWoCancel" onclick="detailWoCancel();">0</span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener6" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div id="kontener7" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script type="text/javascript">
+    const FRM = 'dashboard.inc.php';
+
+    setInterval(function(){
+      reqWO();    
+    },5*60*1000);
+
+    $(document).ready(function () {
+      reqWO();
+    })
+      
+    function tampilChart(grfnya, typenya, axisx, judulnya, juduly, datanya) {
+      Highcharts.chart(grfnya, {
+        chart: {
+          type: typenya
+        },
+        title: {
+          text: judulnya
+        },
+        xAxis: {
+          categories: axisx,
+          crosshair: true
+        },
+        yAxis: {
+          title: {
+            text: juduly
+          }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px;color:{series.color}">{series.name}</span><br>',
+            pointFormat: ': <b>{point.y:f} Min</b><br/>'
+        },
+        credits : {
+          enabled : false
+        },
+        plotOptions: {
+          column: {
+            dataLabels: {
+              enabled: true
+            }  
+          },
+          line: {
+            dataLabels: {
+              enabled: true
+            },
+            enableMouseTracking: false
+          },
+          series: {
+            cursor: 'pointer',
+            point: {
+                events: {
+                    click: function() {
+                        viewDetailChart(grfnya, this.series.name);
+                    }
+                }
+            }
+          }
+        },
+        series: datanya
+      });
+    }
+
+    function reqWO() {
+      $.ajax({
+        url: FRM+ "?mode=reqwo", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#spReqBlnIni").html(o.req_bln_ini);
+          $("#spReqNotAppr").html(o.req_not_appr);
+          $("#spReqNotSch").html(o.req_not_sch);
+          $("#spReqCancel").html(o.req_cancel);
+          $("#spWoBlnIni").html(o.wo_bln_ini);
+          $("#spWoComp").html(o.wo_comp);
+          $("#spWoNotReady").html(o.wo_not_ready);
+          $("#spWoNotComp").html(o.wo_not_comp);
+          $("#spWoCancel").html(o.wo_cancel);
+          console.log(o.chart_req);
+          tampilChart('kontener6', 'line', ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], 'Request Tahun '+moment().format("YYYY"), 'Jumlah', o.chart_req);
+          tampilChart('kontener7', 'line', ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], 'Work Order Tahun '+moment().format("YYYY"), 'Jumlah', o.chart_wo);
+        }
+      });
+    }
+
+    function detailReqBlnIni() {
+      $.ajax({
+        url: FRM+ "?mode=dtlreqblnini", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Request Bulan Ini');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailReqNotAppr() {
+      $.ajax({
+        url: FRM+ "?mode=dtlreqnotappr", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Request Belum di-Approve');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailReqNotSch() {
+      $.ajax({
+        url: FRM+ "?mode=dtlreqnotsch", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Request Belum di-Schedule-kan');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailReqCancel() {
+      $.ajax({
+        url: FRM+ "?mode=dtlreqcancel", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Request Cancel');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailWoBlnIni() {
+      $.ajax({
+        url: FRM+ "?mode=dtlwoblnini", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Work Order Bulan Ini');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailWoComp() {
+      $.ajax({
+        url: FRM+ "?mode=dtlwocomp", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Work Order Completed Bulan Ini');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailWoNotComp() {
+      $.ajax({
+        url: FRM+ "?mode=dtlwonotcomp", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Work Order Belum Completed');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+
+    function detailWoCancel() {
+      $.ajax({
+        url: FRM+ "?mode=dtlwocancel", 
+        success: function(result){
+          var o = JSON.parse(result);
+          $("#judulModal").html('Work Order Cancel');
+          $("#isiModal").html(o.hasil);
+          $('#myModal').modal('show');   
+        }
+      });
+    }
+  </script>
+</body>
+</html>

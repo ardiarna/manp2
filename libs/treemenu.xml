@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<tree id="0" >
+	<item text="&lt;font size='2' color='green' &gt;&lt;b&gt;System Setting&lt;/b&gt;&lt;/font&gt;" id="lb_1001" open="1">
+		<item text="&lt;font size='2'  &gt;Location&lt;/font&gt;" id="lb_100101">
+			<userdata name="href">app/setting/location.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Sub Location&lt;/font&gt;" id="lb_100102">
+			<userdata name="href">app/setting/sublocation.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Asset Group&lt;/font&gt;" id="lb_100103">
+			<userdata name="href">app/setting/groupasset.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Asset Category&lt;/font&gt;" id="lb_100104">
+			<userdata name="href">app/setting/categoryasset.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Manufacture&lt;/font&gt;" id="lb_100105">
+			<userdata name="href">app/setting/manufacture.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;personnel&lt;/font&gt;" id="lb_100106">
+			<userdata name="href">app/setting/personnel.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Maintenance Type&lt;/font&gt;" id="lb_100107">
+			<userdata name="href">app/setting/maintenancetype.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;User&lt;/font&gt;" id="lb_100108">
+			<userdata name="href">app/setting/user.php</userdata>
+		</item>
+		<item text="&lt;font size='2'  &gt;Check List&lt;/font&gt;" id="lb_100109">
+			<userdata name="href">app/setting/ceklist.php</userdata>
+		</item>
+	</item>
+	<item text="&lt;font size='2' color='blue' &gt;&lt;b&gt;Asset&lt;/b&gt;&lt;/font&gt;" id="lb_1002">
+		<userdata name="href">app/assets/assetmaster.php</userdata>
+	</item>
+	<item text="&lt;font size='2' color='red' &gt;&lt;b&gt;Activity&lt;/b&gt;&lt;/font&gt;" id="lb_1003" open="1">
+		<item text="&lt;font size='2'&gt;Request&lt;/font&gt;" id="lb_100301">
+			<userdata name="href">app/activity/workrequest.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Approve Work Request&lt;/font&gt;" id="lb_100302">
+			<userdata name="href">app/activity/approvewr.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Work Order&lt;/font&gt;" id="lb_100303">
+			<userdata name="href">app/activity/workorder.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Completed Work Order&lt;/font&gt;" id="lb_100304">
+			<userdata name="href">app/activity/completewo.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Asset Hours of Use &lt;/font&gt;" id="lb_100305">
+			<userdata name="href">app/activity/assethours.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Asset Last KM &lt;/font&gt;" id="lb_100306">
+			<userdata name="href">app/activity/assetkm.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Downtime Asset &lt;/font&gt;" id="lb_100307">
+			<userdata name="href">app/activity/downtime.php</userdata>
+		</item>
+		<!-- <item text="&lt;font size='2'&gt;MR List &lt;/font&gt;" id="lb_100308">
+			<userdata name="href">app/activity/memorequest.php</userdata>
+		</item> -->
+		<!-- <item text="&lt;font size='2'&gt;MR SPK List &lt;/font&gt;" id="lb_100309">
+			<userdata name="href">app/activity/mrspk.php</userdata>
+		</item> -->
+		<item text="&lt;font size='2'&gt;PSP List &lt;/font&gt;" id="lb_100310">
+			<userdata name="href">app/activity/psp.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Check List &lt;/font&gt;" id="lb_100311">
+			<userdata name="href">app/activity/inceklist.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;Memo Request &lt;/font&gt;" id="lb_100312">
+			<userdata name="href">app/activity/mrarmasi.php</userdata>
+		</item>
+		<item text="&lt;font size='2'&gt;MR SPK &lt;/font&gt;" id="lb_100313">
+			<userdata name="href">app/activity/mrspkarmasi.php</userdata>
+		</item>
+	</item>
+	<item text="&lt;font size='2' color='green' &gt;&lt;b&gt;Report&lt;/b&gt;&lt;/font&gt;" id="lb_1004" open="1">
+		<item text="Assets History" id="lb_100404">
+			<userdata name="href">app/report/assethistory.php</userdata>
+		</item>
+		<item text="Assets History By Cost" id="lb_100406">
+			<userdata name="href">app/report/assethistoryvalue.php</userdata>
+		</item>
+		<item text="Downtime Report" id="lb_100405">
+			<userdata name="href">app/report/downtimereport.php</userdata>
+		</item>
+		<item text="Work Request List" id="lb_100401">
+			<userdata name="href">app/report/wrlist.php</userdata>
+		</item>
+		<item text="Work Order List" id="lb_100402">
+			<userdata name="href">app/report/wolist.php</userdata>
+		</item>
+		<item text="Sparepart List Request" id="lb_100403">
+			<userdata name="href">app/report/sparepartlist.php</userdata>
+		</item>
+		<item text="Check List" id="lb_100408">
+			<userdata name="href">app/report/ceklist.php</userdata>
+		</item>
+		<item text="MTTR &amp; MTBF" id="lb_100407">
+			<userdata name="href">app/report/mttrmtbf.php</userdata>
+		</item>
+		<item text="Next Schedule" id="lb_100409">
+			<userdata name="href">app/report/nextschedule.php</userdata>
+		</item>
+		<!--
+		<item text="Employee Activity" id="lb_100403">
+			<userdata name="href">app/report/employeactivity.php</userdata>
+		</item>
+		-->
+	</item>
+</tree>
+
+
+				
